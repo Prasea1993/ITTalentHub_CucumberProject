@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="35750" started-at="2023-05-24T15:51:30 IST" finished-at="2023-05-24T15:52:05 IST">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2db7a79b]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="35750" started-at="2023-05-24T15:51:30 IST" finished-at="2023-05-24T15:52:05 IST">
+      <class name="Runners.TestRunner">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:Runners.TestRunner@2db7a79b]" name="beforeSuite" is-config="true" duration-ms="7" started-at="2023-05-24T15:51:30 IST" finished-at="2023-05-24T15:51:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:Runners.TestRunner@2db7a79b]" name="setUpClass" is-config="true" duration-ms="765" started-at="2023-05-24T15:51:30 IST" finished-at="2023-05-24T15:51:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestRunner@2db7a79b]" name="runScenario" duration-ms="30494" started-at="2023-05-24T15:51:31 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-05-24T15:52:01 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login to Bahmni using valid account"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Login tests]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runners.TestRunner@2db7a79b]" name="tearDownClass" is-config="true" duration-ms="4438" started-at="2023-05-24T15:52:01 IST" finished-at="2023-05-24T15:52:05 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:Runners.TestRunner@2db7a79b]" name="afterSuite" is-config="true" duration-ms="2" started-at="2023-05-24T15:52:06 IST" finished-at="2023-05-24T15:52:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- Runners.TestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
