@@ -2,7 +2,7 @@
 Feature: Testing Bahmni Clinic | All options on observations tab
 
   Background: Admin & Doctor User able to Login Successfully
-    Given User opens the Browser
+    Given Open the Browser
     And Enters the URL "https://docker.lite.mybahmni.in/"
     Then WELCOME TO BAHMNI EMR FOR CLINICS Dashboard Page should be Visible
     When Clicked on Clinical Service
