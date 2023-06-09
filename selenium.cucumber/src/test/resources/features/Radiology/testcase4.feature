@@ -8,3 +8,4 @@ Feature:Radiology testcase 4
     When chest tab is displayed it will display different types of x.ray are displayed
     And Click Chest x.ray single view
     Then User should be able to  see in selected Ordered tab
+

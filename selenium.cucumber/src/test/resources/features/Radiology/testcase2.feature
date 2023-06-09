@@ -9,3 +9,5 @@ Feature:Radiology testcase 2
     And Click patient record
     And User should see the Consultation button
     Then User should able to display Consultation tab
+
+

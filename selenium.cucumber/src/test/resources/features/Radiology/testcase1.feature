@@ -10,3 +10,4 @@ Feature: Login tests
       | superman             | Admin123     | General Ward        |
     And Click login button
     Then user should be able to login to the app
+

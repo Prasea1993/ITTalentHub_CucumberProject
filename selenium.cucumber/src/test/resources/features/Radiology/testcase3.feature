@@ -9,3 +9,5 @@ Feature:Radiology testcase 3
     And Click Radiology ordered button
     And User should see the Radiology orders display like neck , check , knee hip,all information laboratory test
     Then User should be able display Ordered tab
+
+

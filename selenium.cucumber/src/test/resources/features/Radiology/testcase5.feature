@@ -8,3 +8,4 @@ Feature:Radiology testcase 5
     When face tab is displayed it will display different types of x.ray are displayed
     And Click face x ray of paranasal sinuses , three views
     Then User should be able to  see in selected Ordered tab
+
