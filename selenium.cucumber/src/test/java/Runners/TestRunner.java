@@ -6,13 +6,14 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 
-@CucumberOptions(features = { "src//test//resources//features" }, glue = {
+@CucumberOptions(features = { "src//test//resources//features//PatientRegistration-Manasa//PatientRegistration.feature" }, glue = {
 		"StepDefinitions" }, monochrome = false, plugin = { "pretty", "html:target/CucumberReport/TestCase1.html" })
 public class TestRunner extends AbstractTestNGCucumberTests {
 
 	@Override
-	@DataProvider(parallel = true)
+	@DataProvider(parallel = false)
 	public Object[][] scenarios() {
+		System.out.println(super.scenarios().toString());
 		return super.scenarios();
 	}
 
