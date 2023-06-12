@@ -1,0 +1,50 @@
+package StepDefinitions;
+
+import PageObjects.LoginPage;
+import PageObjects.PatientRegistrationPage;
+import Utilities.TestContext;
+import Utilities.Wait;
+import io.cucumber.java.en.And;
+
+public class PatientRegistrationSteps {
+	
+	
+	TestContext testContext;
+	PatientRegistrationPage patientRegPage;
+	
+
+	// instance variables /methods
+
+	public PatientRegistrationSteps(TestContext context) {
+		testContext = context;
+		patientRegPage = testContext.getPageObjectManager().getPatientRegPage();
+	}
+	
+	
+	
+	@And("user clicks on the register button")
+	public void user_clicks_on_the_register_button() {
+	    
+		patientRegPage.clickRegister();
+	}
+
+	@And("user clicks on the Create New button")
+	public void user_clicks_on_the_create_new_button() {
+	    
+		patientRegPage.clickCreateNew();
+	}
+
+	@And("user entered the details {string}  {string} {string} {string} {string}")
+	public void user_entered_the_details(String fName, String lName, String gender, String age, String village) {
+	    
+		patientRegPage.fillPatientData(fName, lName, gender, age, village);
+	}
+
+	@And("user clicks on the start save button")
+	public void user_clicks_on_the_start_save_button() {
+	   
+		patientRegPage.clickSubmit();
+	}
+
+
+}
