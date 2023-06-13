@@ -43,10 +43,6 @@ public class Wait {
     public static void untilElementIsVisible(WebDriver webDriver, WebElement webElement, Long timeOutInSeconds) {
         new WebDriverWait(webDriver, timeOutInSeconds).until(ExpectedConditions.visibilityOf(webElement));
     }
-    
-    public static WebDriverWait setSimpleWait(WebDriver webDriver, int timeOutInSeconds) {
-        return new WebDriverWait(webDriver, timeOutInSeconds);
-    }
 
     public static void untilListElementIsVisible(WebDriver webDriver, List<WebElement> webElements, Long timeOutInSeconds) {
         new WebDriverWait(webDriver, timeOutInSeconds).until(ExpectedConditions.visibilityOfAllElements(webElements));

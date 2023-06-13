@@ -7,7 +7,6 @@ import org.testng.Assert;
 
 import PageObjects.LoginPage;
 import Utilities.TestContext;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -16,9 +15,6 @@ public class LoginSteps {
 
 	TestContext testContext;
 	LoginPage loginPage;
-	
-
-	// instance variables /methods
 
 	public LoginSteps(TestContext context) {
 		testContext = context;
@@ -41,15 +37,6 @@ public class LoginSteps {
 		}
 
 	}
-	
-	@And("Input credentials to login {string} and {string} and {string}")
-	public void input_credentials_to_login_and_and(String username, String password, String logintype) {
-	    
-		loginPage.fillUserData(username,password,logintype);
-	}
-
-
-	
 
 	@When("Click login button")
 	public void click_login_button() {
