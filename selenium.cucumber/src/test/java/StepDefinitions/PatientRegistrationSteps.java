@@ -5,6 +5,7 @@ import PageObjects.PatientRegistrationPage;
 import Utilities.TestContext;
 import Utilities.Wait;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 
 public class PatientRegistrationSteps {
 	
@@ -19,9 +20,7 @@ public class PatientRegistrationSteps {
 		testContext = context;
 		patientRegPage = testContext.getPageObjectManager().getPatientRegPage();
 	}
-	
-	
-	
+
 	@And("user clicks on the register button")
 	public void user_clicks_on_the_register_button() {
 	    
@@ -41,10 +40,18 @@ public class PatientRegistrationSteps {
 	}
 
 	@And("user clicks on the start save button")
-	public void user_clicks_on_the_start_save_button() {
-	   
+	public void user_clicks_on_the_start_save_button()
+	{
 		patientRegPage.clickSubmit();
 	}
 
+	@Then("A user should not able click on save button")
+	public void a_user_should_not_able_click_on_save_button()
+	{
+		{
+			patientRegPage.clickSubmit();
+		}
+		System.out.println("Please match the format requested");
+	}
 
 }

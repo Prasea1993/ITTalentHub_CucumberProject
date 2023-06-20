@@ -49,8 +49,6 @@ public class LoginSteps {
 	}
 
 
-	
-
 	@When("Click login button")
 	public void click_login_button() {
 		loginPage.clickLogin();
@@ -58,8 +56,27 @@ public class LoginSteps {
 	}
 
 	@Then("user should be able to login to the app")
-	public void user_should_be_able_to_login_to_the_app() {
+	public void user_should_be_able_to_login_to_the_app()
+	{
 		Assert.assertTrue(loginPage.isUserInfoSectionDisplayed());
 	}
+	@When("A user click on login button")
+	public void a_user_click_on_login_button() {
+
+		loginPage.clickLogin();
+	}
+	@Then("A user should not able to login")
+	public void a_user_should_not_able_to_login() {
+		Assert.assertTrue(loginPage.isUserLoginPageInvalid());
+	}
+
+	@Then("Error should display {string}")
+	public void error_should_display(String string) {
+		Assert.assertTrue(loginPage.isUserInfoSectionInvalid());
+	}
+	{
+		System.out.println("You are not authenticated or your session expired. Please login");
+	}
+
 
 }
