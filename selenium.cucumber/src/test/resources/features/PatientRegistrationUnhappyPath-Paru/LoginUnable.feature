@@ -7,7 +7,7 @@ Feature: Login unable
 
 
 @DataTableHeaders
-Scenario: Login with invalid data by entering an invalid username
+Scenario: Login to Bahmni using an invalid username
   Given Login page is displayed
   When Input credentials to login with headers table
   | Username         | Password | LoginType    | error message |
@@ -17,7 +17,7 @@ Scenario: Login with invalid data by entering an invalid username
   Then Error should display "<You are not authenticated or your session expired. Please login>"
 
 
-  Scenario: Login with invalid data by entering an invalid password
+  Scenario: Login to Bahmni using an invalid password
   Given Login page is displayed
     When Input credentials to login with headers table
     | Username         | Password | LoginType    | error message |
@@ -27,8 +27,7 @@ Scenario: Login with invalid data by entering an invalid username
   Then Error should display "<You are not authenticated or your session expired. Please login>"
 
 
-
-  Scenario: Login with invalid data by entering an invalid username and password
+  Scenario: Login to Bahmni using an invalid username and password
     When Input credentials to login with headers table
     | Username         | Password | LoginType    | error message |
     | paru123          | 1234     | General Ward | Authentication failed |

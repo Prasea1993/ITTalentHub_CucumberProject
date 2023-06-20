@@ -1,6 +1,6 @@
 Feature: Bahmni-Patient Registration
 
-  Scenario Outline: Verifies User able to Register the patient with valid details
+  Scenario Outline: Verifies User unable to Register the patient with invalid details
     Given Login page is displayed
     When Input credentials to login "<username>" and "<password>" and "<logintype>"
     And Click login button
