@@ -14,7 +14,8 @@ public class PatientRegistrationPage {
 	
 	WebDriverWait wait;
 	
-	public PatientRegistrationPage(WebDriver webDriver) {
+	public PatientRegistrationPage(WebDriver webDriver)
+	{
 		PageFactory.initElements(webDriver, this);
 		wait=Wait.setSimpleWait(webDriver,30);
 		
@@ -39,9 +40,7 @@ public class PatientRegistrationPage {
 	
 	@FindBy(id = "ageYears")
 	private WebElement txtAge;
-	
-	
-	
+
 	@FindBy(id = "cityVillage")
 	private WebElement txtVillageName;
 	
@@ -61,10 +60,8 @@ public class PatientRegistrationPage {
     	 
     	  wait.until(ExpectedConditions.visibilityOf(btnCreateNew));
     	  btnCreateNew.click();
-		
 	}
-     
-     
+
      public void fillPatientData(String fName,String lName,String gender,String age,String village ) {
     	 
     	 wait.until(ExpectedConditions.visibilityOf(txtFirstName));
@@ -80,22 +77,5 @@ public class PatientRegistrationPage {
      public void clickSubmit() {
     	 
     	 btnSubmit.click();
-    	 
- 		
- 	}
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
+	}
 }

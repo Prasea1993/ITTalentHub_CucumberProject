@@ -13,13 +13,19 @@ public class LoginPage {
 	}
 
 	@FindBy(xpath = "//div[@class='emr-login-text']")
-	private WebElement headerEMR;
+	private static WebElement headerEMR;
 
 	@FindBy(id = "username")
 	private WebElement txtUsername;
 
 	@FindBy(id = "password")
 	private WebElement txtPassword;
+
+	@FindBy(xpath = "//*[@fdprocessedid='3v5a8o']")   //Invalid  Username
+	private WebElement txtInvalidUsernameLoginError;
+
+	@FindBy(xpath ="//*[@ng-model='loginInfo.password']")  //Invalid password
+	private WebElement txtInvalidPasswordLoginError;
 
 	@FindBy(xpath = "//button[text()='Login']")
 	private WebElement btnLogin;
@@ -30,11 +36,17 @@ public class LoginPage {
 	@FindBy(xpath = "//button[@class='btn-user-info fr']")
 	private WebElement btnUserInfo;
 
+	@FindBy(linkText = "//form/div/div[@class='note-container']/div/div[@ class='text']")  //Invalid Login Error MSG
+	private WebElement txtInvalidLoginErrorMSG;
+
 	public boolean isLoginPageDisplayed() {
 
 		return headerEMR.isDisplayed();
 	}
+	public static boolean isUserLoginInvalid() {
 
+		return headerEMR.isDisplayed();
+	}
 	public void fillUserData(String username, String password, String location) {
 		txtUsername.sendKeys(username);
 		txtPassword.sendKeys(password);
@@ -43,7 +55,8 @@ public class LoginPage {
 
 	}
 
-	public void clickLogin() {
+	public void clickLogin()
+	{
 		btnLogin.click();
 	}
 
