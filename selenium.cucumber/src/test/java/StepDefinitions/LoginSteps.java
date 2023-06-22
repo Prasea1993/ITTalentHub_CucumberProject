@@ -16,7 +16,6 @@ public class LoginSteps {
 
 	TestContext testContext;
 	LoginPage loginPage;
-	
 
 	// instance variables /methods
 
@@ -43,16 +42,15 @@ public class LoginSteps {
 	}
 	
 	@And("Input credentials to login {string} and {string} and {string}")
-	public void input_credentials_to_login_and_and(String username, String password, String logintype) {
-	    
+	public void input_credentials_to_login_and_and(String username, String password, String logintype)
+	{
 		loginPage.fillUserData(username,password,logintype);
 	}
 
-
 	@When("Click login button")
-	public void click_login_button() {
+	public void click_login_button()
+	{
 		loginPage.clickLogin();
-
 	}
 
 	@Then("user should be able to login to the app")
@@ -60,23 +58,23 @@ public class LoginSteps {
 	{
 		Assert.assertTrue(loginPage.isUserInfoSectionDisplayed());
 	}
-	@When("A user click on login button")
-	public void a_user_click_on_login_button() {
 
-		loginPage.clickLogin();
-	}
-	@Then("A user should not able to login")
-	public void a_user_should_not_able_to_login() {
-		Assert.assertTrue(loginPage.isUserLoginPageInvalid());
-	}
-
-	@Then("Error should display {string}")
-	public void error_should_display(String string) {
-		Assert.assertTrue(loginPage.isUserInfoSectionInvalid());
-	}
+	@Then("User should be able to see error message {string}")
+	public void user_should_be_able_to_see_error_message(String string)
 	{
-		System.out.println("You are not authenticated or your session expired. Please login");
+		Assert.assertTrue(LoginPage.isUserLoginInvalid());
 	}
 
+	@When("User enters Username as {string} and Password {string} and as LoginType {string}")
+	public void user_enters_username_as_and_password_and_as_login_type(String string, String string2, String string3)
+	{
+		Assert.assertTrue(LoginPage.isUserLoginInvalid());
+	}
+
+	@Then("User should be able to see a message {string} below Username")
+	public void user_should_be_able_to_see_a_message_below_username(String string)
+	{
+		Assert.assertTrue(LoginPage.isUserLoginInvalid());
+	}
 
 }

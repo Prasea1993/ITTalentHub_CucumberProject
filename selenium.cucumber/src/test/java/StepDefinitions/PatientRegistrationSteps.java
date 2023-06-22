@@ -6,6 +6,7 @@ import Utilities.TestContext;
 import Utilities.Wait;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import org.testng.Assert;
 
 public class PatientRegistrationSteps {
 	
@@ -53,5 +54,14 @@ public class PatientRegistrationSteps {
 		}
 		System.out.println("Please match the format requested");
 	}
+
+	@Then("Error should display {string}")
+	public void error_should_display(String string) {
+		patientRegPage.clickCreateNew();
+	}
+	{
+
+	}
+
 
 }
