@@ -67,6 +67,8 @@ public class ConfigFileReader {
                 return DriverType.EDGE;
             case "safari":
                 return DriverType.SAFARI;
+            case "remoteChrome":
+                return DriverType.REMOTE_CHROME;
             default:
                 throw new RuntimeException("Browser name key value in configuration file is not matched: " + browserName);
         }

@@ -13,6 +13,29 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+
+    <profiles>
+        <profile>
+            <id>SanityTest</id>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-surefire-plugin</artifactId>
+                            <version>3.0.0-M3</version>
+                            <configuration>
+                                <suiteXmlFiles>
+                                    <suiteXmlFile>TestNg.xml</suiteXmlFile>
+                                </suiteXmlFiles>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
+    </profiles>
+
     <dependencies>
         <dependency>
             <groupId>io.cucumber</groupId>

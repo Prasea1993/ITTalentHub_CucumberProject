@@ -12,4 +12,3 @@ Feature: Bahmni-Patient Registration
     Examples: 
       | firstname | lastname | gender | age | village | username      | password   | logintype |
       | Manasaas    | reddy    | Female |  30 | India   | superman      | Admin123   | General Ward |
-      | Prashanthsd    | Sam    | Male |  35 | India   | superman      | Admin123   | General Ward |

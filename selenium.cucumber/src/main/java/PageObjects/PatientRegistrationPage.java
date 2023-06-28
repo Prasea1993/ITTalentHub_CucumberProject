@@ -48,6 +48,11 @@ public class PatientRegistrationPage {
 	
 	@FindBy(xpath = "//button[@class='right submit-btn']")
 	private WebElement btnSubmit;
+
+	@FindBy(xpath = "//button[text()='Start OPD visit']")
+	private WebElement btnStartOpdVisit;
+
+
 	
 	
 	public void clickRegister() {
@@ -80,6 +85,7 @@ public class PatientRegistrationPage {
      public void clickSubmit() {
     	 
     	 btnSubmit.click();
+		// btnStartOpdVisit.click();
     	 
  		
  	}
