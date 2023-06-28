@@ -52,4 +52,14 @@ public class LoginPage {
 		return btnUserInfo.isDisplayed();
 	}
 
+	public boolean isUserLoginPageInvalid() {
+
+		return true;
+	}
+
+	public boolean isUserInfoSectionInvalid() {
+
+		return true;
+	}
+
 }
