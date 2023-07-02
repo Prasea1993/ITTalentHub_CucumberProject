@@ -86,4 +86,29 @@ public class ConfigFileReader {
                 throw new RuntimeException("Environment type key value in configuration file is not matched: " + environmentName);
         }
     }
+
+
+    public String getBrowserStackUserName() {
+       try{
+
+          return properties.getProperty("browserStackUserName");
+       }
+       catch(Exception ex){
+
+          return null;
+       }
+    }
+
+    public String getBrowserStackAccessKey() {
+        try{
+
+            return properties.getProperty("browserStackAccessKey");
+        }
+        catch(Exception ex){
+
+            return null;
+        }
+    }
+
+
 }

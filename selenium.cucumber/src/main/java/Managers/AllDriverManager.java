@@ -40,9 +40,11 @@ public class AllDriverManager {
                     break;
                 case REMOTE_CHROME:
 
+
+
                     DesiredCapabilities capability=new DesiredCapabilities();
-                    capability.setCapability("browserstack.user", "prashanthsamudra_g4CrU0");
-                    capability.setCapability("browserstack.key", "5hcvzDcL8UnYZJcjeotG");
+                    capability.setCapability("browserstack.user",  FileReaderManager.getInstance().getConfigFileReader().getBrowserStackUserName());
+                    capability.setCapability("browserstack.key",  FileReaderManager.getInstance().getConfigFileReader().getBrowserStackAccessKey());
                     ChromeOptions chromeOptions2 = new ChromeOptions();
                     chromeOptions2.addArguments("--ignore-ssl-errors=yes");
                     chromeOptions2.addArguments("--ignore-certificate-errors");
