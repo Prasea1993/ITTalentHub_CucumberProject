@@ -1,0 +1,45 @@
+Local files   ====> Staging area ======> Remote area 
+
+
+
+=====> Git (Version control system)
+=====>GitHub (Hosting server Git UI)
+
+Hello world.java  Addition/Modification/Deletion
+Helloworld2.java
+
+Heloworld ====> asasahh123434asasas.  ===> 1.0
+Helloworld ====> 1211212sfsdfdsfdsfdsfds. ===> 2.0
+
+
+Local ====> Remote 
+
+Branching 
+
+====> Master/Base(10000 files , 50000 lines code). (Merge )
+
+====> AugustFeatures(10000 , 50000 lines) + 500 , 2000lines code 
+
+====> SeptRelaease( 10500, 52000). ====> 500 , 2000. 
+
+10 developers
+
+MASTER(10 consolidated )
+
+FEATURE_PRASHANTH
+FEATURE_MOUNICA
+DEV3_SRIKANTH
+DEV4
+
+
+====> git init 
+====> git add .
+====> git commit -m “Added hello world.java”
+=====> git clone “URL”
+====> git pull
+
+
+
+
+
+
